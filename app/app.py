@@ -21,24 +21,39 @@ st.set_page_config(
 )
 
 # ── Load data ─────────────────────────────────────────────────────
+from pathlib import Path
+import joblib
+import pandas as pd
+import streamlit as st
+
+# Base directory của project
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Data paths
+DATA_DIR = BASE_DIR / "data"
+MODEL_DIR = BASE_DIR / "output" / "models"
+
 @st.cache_data
 def load_data():
-    df = pd.read_parquet("../data/merged_crime_data.parquet")
-    clusters = pd.read_csv("../output/models/neighbourhood_clusters.csv")
+    df = pd.read_parquet(DATA_DIR / "merged_crime_data.parquet")
+    clusters = pd.read_csv(MODEL_DIR / "neighbourhood_clusters.csv")
     return df, clusters
 
 @st.cache_resource
 def load_models():
-    rf       = joblib.load("../output/models/random_forest.pkl")
-    le_city  = joblib.load("../output/models/le_city.pkl")
-    le_month = joblib.load("../output/models/le_month.pkl")
-    le_neigh = joblib.load("../output/models/le_neighbourhood.pkl")
+    rf = joblib.load(MODEL_DIR / "random_forest.pkl")
+    le_city = joblib.load(MODEL_DIR / "le_city.pkl")
+    le_month = joblib.load(MODEL_DIR / "le_month.pkl")
+    le_neigh = joblib.load(MODEL_DIR / "le_neighbourhood.pkl")
     return rf, le_city, le_month, le_neigh
 
 df, clusters = load_data()
 rf, le_city, le_month, le_neigh = load_models()
 
-COLORS = {'Toronto': '#2196F3', 'Vancouver': '#FF5722'}
+COLORS = {
+    'Toronto': '#2196F3',
+    'Vancouver': '#FF5722'
+}
 
 # ── Sidebar ───────────────────────────────────────────────────────
 st.sidebar.title("🔍 Crime Analysis")

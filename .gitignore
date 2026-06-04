@@ -1,4 +1,10 @@
-data/
+# Keep processed data used by Streamlit
+# data/
+
+# Ignore raw datasets that are too large
+data/toronto/
+data/vancouver/
+
 outputs/
 __pycache__/
 .ipynb_checkpoints/
