@@ -187,7 +187,7 @@ if page == "📊 Overview":
 
             st.dataframe(
                 city_clusters.style.map(color_risk, subset=['Risk Level']),
-                use_container_width=True, 
+                width='stretch', 
                 hide_index=True
             )
 
@@ -359,5 +359,5 @@ elif page == "🤖 ML Predictor":
     col2.metric("Property Crime F1", "0.76")
     col3.metric("Violent Crime F1", "0.75")
 
-    st.image("../output/figures/model_results.png",
+    st.image(MODEL_DIR / "figures" / "model_results.png",
              caption="Confusion Matrix & Feature Importance", width="stretch")
