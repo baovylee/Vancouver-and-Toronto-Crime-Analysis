@@ -32,6 +32,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Data paths
 DATA_DIR = BASE_DIR / "data"
 MODEL_DIR = BASE_DIR / "output" / "models"
+OUTPUT_DIR = BASE_DIR / "output"
 
 @st.cache_data
 def load_data():
@@ -359,5 +360,10 @@ elif page == "🤖 ML Predictor":
     col2.metric("Property Crime F1", "0.76")
     col3.metric("Violent Crime F1", "0.75")
 
-    st.image(MODEL_DIR / "figures" / "model_results.png",
-             caption="Confusion Matrix & Feature Importance", width="stretch")
+img_path = OUTPUT_DIR / "figures" / "model_results.png"
+
+st.image(
+    img_path,
+    caption="Confusion Matrix & Feature Importance",
+    width="stretch"
+)
