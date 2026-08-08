@@ -1,4 +1,4 @@
-# 🔍 Toronto vs Vancouver Crime Analysis
+# Toronto vs Vancouver Crime Analysis
 
 An end-to-end Data Science project comparing crime patterns in Toronto and Vancouver using official open-government data, exploratory data analysis, machine learning, and an interactive Streamlit dashboard.
 
@@ -27,7 +27,7 @@ The objective is to identify differences in crime patterns, explore temporal and
 
 ---
 
-## 🤖 Machine Learning
+## Machine Learning
 
 ### K-Means Clustering
 
