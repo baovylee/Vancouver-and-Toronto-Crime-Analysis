@@ -2,17 +2,13 @@
 
 An end-to-end Data Science project comparing crime patterns in Toronto and Vancouver using official open-government data, exploratory data analysis, machine learning, and an interactive Streamlit dashboard.
 
-🚀 **Live Demo:** https://vancouver-and-toronto-crime-analysis.streamlit.app/
+ **Live Demo:** https://vancouver-and-toronto-crime-analysis.streamlit.app/
 
 📂 **Dataset:** 696,000+ crime incidents (2016–2025)
 
 ---
 
-## 📸 Dashboard Preview
-
-
-
-## 📌 Project Overview
+## Project Overview
 
 This project analyzes over 696,000 crime incidents reported in Toronto and Vancouver between 2016 and 2025.
 
@@ -20,7 +16,7 @@ The objective is to identify differences in crime patterns, explore temporal and
 
 ---
 
-## 🔑 Key Findings
+## Key Findings
 
 * Toronto is dominated by **Violent Crime (60.3%)**
 * Vancouver is dominated by **Property Crime (76.6%)**
@@ -78,7 +74,7 @@ The city where a crime occurs is the strongest predictor of crime type, contribu
 
 ---
 
-## 📊 Dashboard Features
+## Dashboard Features
 
 ### Overview
 
@@ -106,7 +102,7 @@ The city where a crime occurs is the strongest predictor of crime type, contribu
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * Python
 * Pandas
@@ -120,7 +116,7 @@ The city where a crime occurs is the strongest predictor of crime type, contribu
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 crime-analysis/
@@ -137,7 +133,7 @@ crime-analysis/
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 ```bash
 git clone https://github.com/baovylee/Vancouver-and-Toronto-Crime-Analysis
@@ -149,7 +145,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 Run Locally
+## Run Locally
 
 ```bash
 streamlit run app/app.py
@@ -157,7 +153,7 @@ streamlit run app/app.py
 
 ---
 
-## 📄 Data Sources
+## Data Sources
 
 * Toronto Police Service Open Data
 * Vancouver Police Department Open Data
